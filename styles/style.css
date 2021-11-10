@@ -1,0 +1,291 @@
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+        *,
+        *:before,
+        *:after {
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        
+        @font-face {
+            font-family: 'led16sgmnt2';
+            src: url('../styles/ledsled.ttf') format('truetype');
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            /* background-color: ##cfd9df;
+            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+        }
+        
+        .info {
+            display: flex;
+            text-align: center;
+            top: 20px;
+            left: 20px;
+            background-color: white;
+            position: absolute;
+            border-radius: .5rem;
+            box-shadow: 0 .25rem .125rem 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        .info .logoSlot {
+            display: flex;
+            width: 97.54px;
+            height: 75.2px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: .5rem 0rem 0rem .5rem;
+        }
+        
+        #menu.active {
+            width: 75.2px;
+            height: 75.2px;
+            border-radius: .5rem;
+        }
+        
+        #toggle.active {
+            display: flex;
+            width: 75.2px;
+            height: 75.2px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: .5rem;
+        }
+        
+        #sidebar.active {
+            display: none;
+        }
+        
+        .info .textSlot {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 0rem 0.5rem 0.5rem 0rem;
+            color: white;
+            background: repeating-linear-gradient( 45deg, #1d4b5777, #1d4b5777 10px, #36657077 10px, #36657077 20px);
+        }
+        
+        .info .textSlot h4 {
+            margin-bottom: 6px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px black;
+        }
+        
+        .info .textSlot h5 {
+            font-weight: 500;
+            text-shadow: 1px 1px 2px black;
+        }
+        
+        .container {
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            width: 380px;
+            height: 675.5px;
+            background-size: cover;
+            background-image: url(../images/base.jpg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            padding: 72px 34px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            user-select: none;
+        }
+        
+        .logo {
+            width: 100%;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: end;
+            padding-right: 5%;
+            color: rgb(104, 104, 104);
+            position: relative;
+            /* margin-top: 3%; */
+            margin-top: 0.5%;
+            margin-bottom: 7.5%;
+        }
+        
+        #entrybox {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, minmax(35px, auto));
+            word-wrap: break-word;
+            /* border-bottom: 1px rgba(128, 128, 128, 0.116) solid; */
+            margin-bottom: 15.7%;
+        }
+        
+        #entrybox #entry #answer {
+            height: 40px;
+            line-height: 45px;
+            font-family: 'led16sgmnt2';
+            /* font-family: 'BPdotsUnicaseSquare', sans-serif; */
+            text-align: right;
+            font-size: xx-large;
+            word-wrap: break-word;
+            margin-bottom: 1%;
+            color: rgb(25, 255, 140);
+            text-shadow: 0px 0px 8px rgb(25, 255, 140);
+        }
+        
+        #entrybox #history {
+            height: 40px;
+            line-height: 45px;
+            font-family: 'led16sgmnt2';
+            /* font-family: 'BPdotsUnicaseSquare', sans-serif; */
+            text-align: right;
+            font-size: x-large;
+            color: rgb(25, 255, 140);
+            text-shadow: 0px 0px 8px rgb(25, 255, 140);
+        }
+        
+        .keypad-btns {
+            display: grid;
+            grid: repeat(5, 75px) / repeat(4, 75px);
+            grid-row-gap: 4px;
+            grid-column-gap: 4px;
+            position: relative;
+            /* transform: translateX(-0.2%); */
+        }
+        
+        .keypad-btns button {
+            font-size: xx-large;
+            font-weight: 500;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0);
+            /* background-color: blue; */
+        }
+        
+        .keypad-btns .sign {
+            font-weight: 600;
+        }
+        
+        .keypad-btns button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        
+        .keypad-btns button:active {
+            /* transform: translateX(-0.2%); */
+            transform: translate(-2%, -2.5%);
+            /* grid-row-gap: 3.5px; */
+            /* grid-column-gap: 3.5px; */
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 79px;
+            height: 79px;
+            /* box-shadow: inset 0px 0px 5px 4px black; */
+            /* background-color: red; */
+        }
+        
+        .keypad-btns #equalButton {
+            width: 153.876px;
+            height: 75px;
+        }
+        
+        .keypad-btns #equalButton:active {
+            transform: translate(-1%, -2.8%);
+            /* background-color: blue; */
+            width: 157px;
+            height: 79px;
+            /* background-color: red; */
+            box-shadow: inset 0px 0px 5px 3px black;
+        }
+        
+        .keypad-btns #clear {
+            font-size: x-large;
+            font-weight: 600;
+        }
+        
+        .keypad-btns #erase {
+            font-size: x-large;
+            font-weight: 600;
+        }
+        
+        .keypad-btns #percent {
+            font-size: x-large;
+            font-weight: 600;
+        }
+        
+        .color_btn {
+            color: white;
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .info {
+                right: 20px;
+                opacity: 0.7;
+            }
+            .container {
+                width: 340px;
+                height: 604.444px;
+                padding: 62px 30px 35px;
+                border-radius: 15px;
+            }
+            .logo {
+                font-size: 12px;
+                padding-right: 5%;
+                margin-top: 0%;
+                margin-bottom: 8.3%;
+            }
+            #entrybox {
+                grid-template-rows: repeat(2, minmax(35px, auto));
+                margin-bottom: 16%;
+            }
+            #entrybox #entry #answer {
+                height: 30px;
+                line-height: 35px;
+                margin-bottom: 1%;
+            }
+            #entrybox #history {
+                height: 30px;
+                line-height: 35px;
+            }
+            .keypad-btns {
+                grid: repeat(5, 66.5px) / repeat(4, 66.5px);
+                grid-row-gap: 4.1px;
+                grid-column-gap: 4.1px;
+                transform: translateX(-0.2%);
+            }
+            .keypad-btns button {
+                font-weight: 500;
+            }
+            .keypad-btns .sign {
+                font-weight: 600;
+            }
+            .keypad-btns button:active {
+                transform: translate(-2%, -2.5%);
+                grid-row-gap: 4px;
+                grid-column-gap: 4px;
+                width: 70px;
+                height: 70px;
+            }
+            .keypad-btns #equalButton {
+                width: 137.1px;
+                height: 66.5px;
+            }
+            .keypad-btns #equalButton:active {
+                transform: translate(-0.5%, -1.5%);
+                grid-row-gap: 4px;
+                grid-column-gap: 4px;
+                width: 140px;
+                height: 70px;
+            }
+            .keypad-btns #clear {
+                font-weight: 600;
+            }
+            .keypad-btns #erase {
+                font-weight: 600;
+            }
+            .keypad-btns #percent {
+                font-weight: 600;
+            }
+        }
